@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap");
 
+/* Global styles */
+
 body,
 html {
   background-color: #405c5a;
@@ -16,6 +18,8 @@ input {
   text-align: center;
   width: 80%;
 }
+
+/* Main layout */
 
 .App {
   display: flex;

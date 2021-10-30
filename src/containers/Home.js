@@ -15,6 +15,7 @@ function Home() {
 
   const drinksURL = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`;
 
+  // have the UI change based on data
   function changeColor(color) {
     document.body.style.backgroundColor = color;
   }
@@ -27,6 +28,7 @@ function Home() {
     setDrinkName(e.target.value);
   }
 
+  // Using two sources of data
   const getRecipe = () => {
     axios
       .get(recipeURL)
@@ -50,6 +52,8 @@ function Home() {
   };
 
   return (
+    // displaying the two sources of data
+    // have the UI be interactive
     <main className="App">
       <section className="food-section">
         <h1 className="food-title">Food</h1>
