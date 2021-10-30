@@ -1,38 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap");
+
+body,
+html {
+  background-color: #405c5a;
+  font-family: "Kalam", cursive;
+}
+
+input {
+  border-radius: 20px;
+  height: 25px;
+  margin: 0 auto;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  width: 80%;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-section,
+.drinks-section {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 1.5rem;
+  margin: 3rem 2rem 0;
+}
+
+.food-section {
+  background-color: #ffcfa3;
+}
+
+.food-section input,
+.drinks-section input {
+  box-shadow: 5px 6px #a35727;
+}
+
+.drinks-section {
+  background-color: #f0a69c;
+  margin-bottom: 4rem;
+}
+
+.food-title,
+.drinks-title,
+.food-name,
+.drinks-name,
+.foodBtn,
+.drinkBtn {
+  font-family: "Irish Grover", cursive;
+}
+
+.food-title,
+.drinks-title {
+  font-size: 2.75rem;
+  margin: 0 0 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.food-name {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.foodBtn,
+.drinkBtn {
+  box-shadow: 1px 2px #a35727;
+  border-radius: 15px;
+  height: 25px;
+  margin: 1rem auto 0;
+  width: 40%;
+}
+
+.recipeCard,
+.drinkCard {
+  margin: 2rem 0;
+}
+
+.drinkCard img,
+.recipeCard img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 850px) {
+  input {
+    max-width: 400px;
+    width: 100%;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .foodBtn,
+  .drinkBtn {
+    max-width: 200px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .drinks-section {
+    margin-bottom: 0;
+  }
+
+  .food-section,
+  .drinks-section {
+    margin: 12rem 0;
+    max-width: 550px;
+    width: 40%;
   }
 }
