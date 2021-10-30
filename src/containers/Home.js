@@ -43,7 +43,6 @@ function Home() {
       .get(drinksURL)
       .then(function (response) {
         setDrink(response.data);
-        console.log(drinksURL);
       })
       .catch(function (error) {
         console.warn(error);
