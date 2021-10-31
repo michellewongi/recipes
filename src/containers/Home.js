@@ -55,42 +55,45 @@ function Home() {
     // displaying the two sources of data
     // have the UI be interactive
     <main className="App">
-      <section className="food-section">
-        <h1 className="food-title">Food</h1>
-        <input
-          type="text"
-          placeholder="Name of food (e.g. pasta)"
-          onChange={handleChange}
-        />
-        <button
-          className="foodBtn"
-          onClick={() => {
-            getRecipe();
-            changeColor("#f0a69c");
-          }}
-        >
-          Search
-        </button>
-        <Recipe recipeList={food} />
-      </section>
+      <h1 className="logo">Recipes . . .</h1>
+      <section className="search-section">
+        <section className="food-section">
+          <h1 className="food-title">Food</h1>
+          <input
+            type="text"
+            placeholder="Name of food (e.g. pasta)"
+            onChange={handleChange}
+          />
+          <button
+            className="foodBtn"
+            onClick={() => {
+              getRecipe();
+              changeColor("#f0a69c");
+            }}
+          >
+            Search
+          </button>
+          <Recipe recipeList={food} />
+        </section>
 
-      <section className="drinks-section">
-        <h1 className="drinks-title">Drinks</h1>
-        <input
-          type="text"
-          placeholder="Name of drink (e.g. mojito)"
-          onChange={handleChangeDrink}
-        />
-        <button
-          className="drinkBtn"
-          onClick={() => {
-            getDrink();
-            changeColor("#ffcfa3");
-          }}
-        >
-          Search
-        </button>
-        <Drinks drinkList={drink} />
+        <section className="drinks-section">
+          <h1 className="drinks-title">Drinks</h1>
+          <input
+            type="text"
+            placeholder="Name of drink (e.g. mojito)"
+            onChange={handleChangeDrink}
+          />
+          <button
+            className="drinkBtn"
+            onClick={() => {
+              getDrink();
+              changeColor("#ffcfa3");
+            }}
+          >
+            Search
+          </button>
+          <Drinks drinkList={drink} />
+        </section>
       </section>
     </main>
   );

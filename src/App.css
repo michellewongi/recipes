@@ -21,6 +21,13 @@ input {
 
 /* Main layout */
 
+.logo {
+  color: white;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -54,7 +61,8 @@ input {
 .food-name,
 .drinks-name,
 .foodBtn,
-.drinkBtn {
+.drinkBtn,
+.logo {
   font-family: "Irish Grover", cursive;
 }
 
@@ -101,7 +109,8 @@ input {
     max-width: 200px;
   }
 
-  .App {
+  .search-section {
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
@@ -112,8 +121,7 @@ input {
 
   .food-section,
   .drinks-section {
-    margin: 12rem 0;
-    max-width: 550px;
+    margin: 5rem 0 12rem;
     width: 40%;
   }
 }
