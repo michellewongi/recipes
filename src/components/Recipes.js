@@ -4,22 +4,27 @@ function Recipe({ recipeList }) {
   if (!recipeList) return <></>;
   return (
     <section className="recipeCard">
-      <h1 className="food-name">{recipeList.results[0].title}</h1>
-      <img src={recipeList.results[0].image} alt="Food" />
+      <h1 className="food-name">{recipeList.meals[0].strMeal}</h1>
+      <img src={recipeList.meals[0].strMealThumb} alt="Food image" />
       <p>
-        <strong>Serving:</strong> {recipeList.results[0].servings}
+        <strong>Category: </strong>
+        {recipeList.meals[0].strCategory
+          ? recipeList.meals[0].strCategory
+          : "Unknown"}
       </p>
       <p>
-        <strong>Preparation Time:</strong>{" "}
-        {recipeList.results[0].readyInMinutes} minutes
+        <strong>Cuisine: </strong>
+        {recipeList.meals[0].strArea ? recipeList.meals[0].strArea : "Unknown"}
       </p>
+      <strong>Instructions:</strong>
       <p
+        className="instructions"
         dangerouslySetInnerHTML={{
-          __html: recipeList.results[0].summary.replace(/<a .*?>/g, ""),
+          __html: recipeList.meals[0].strInstructions,
         }}
       ></p>
-      <a href={recipeList.results[0].sourceUrl}>
-        Link to the Recipe Instructions
+      <a className="link" href={recipeList.meals[0].strSource}>
+        <strong>Click for Recipe</strong>
       </a>
     </section>
   );

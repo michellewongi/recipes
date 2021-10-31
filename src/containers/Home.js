@@ -3,15 +3,13 @@ import axios from "axios";
 import Recipe from "../components/Recipes";
 import Drinks from "../components/Drinks";
 
-const APIKey = "4cebf157b6644eae9c8599ead141d4be";
-
 function Home() {
   const [food, setFood] = useState();
   const [foodName, setFoodName] = useState();
   const [drink, setDrink] = useState();
   const [drinkName, setDrinkName] = useState();
 
-  const recipeURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKey}&query=${foodName}&number=1&addRecipeInformation=true`;
+  const recipeURL = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`;
 
   const drinksURL = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`;
 
@@ -34,7 +32,6 @@ function Home() {
       .get(recipeURL)
       .then(function (response) {
         setFood(response.data);
-        console.log(recipeURL);
       })
       .catch(function (error) {
         console.warn(error);
@@ -46,6 +43,7 @@ function Home() {
       .get(drinksURL)
       .then(function (response) {
         setDrink(response.data);
+        console.log(drinksURL);
       })
       .catch(function (error) {
         console.warn(error);

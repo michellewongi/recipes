@@ -8,6 +8,7 @@ body,
 html {
   background-color: #405c5a;
   font-family: "Kalam", cursive;
+  font-size: 16px;
 }
 
 input {
@@ -17,6 +18,10 @@ input {
   margin-bottom: 0.3rem;
   text-align: center;
   width: 80%;
+}
+
+strong {
+  font-size: 1.5rem;
 }
 
 /* Main layout */
@@ -62,7 +67,9 @@ input {
 .drinks-name,
 .foodBtn,
 .drinkBtn,
-.logo {
+.logo,
+.video,
+.link {
   font-family: "Irish Grover", cursive;
 }
 
@@ -90,7 +97,7 @@ input {
 
 .recipeCard,
 .drinkCard {
-  margin: 2rem 0;
+  margin: 2rem 0 0;
 }
 
 .drinkCard img,
@@ -98,7 +105,22 @@ input {
   width: 100%;
 }
 
+.instructions {
+  margin-bottom: 4rem;
+}
+
+.link {
+  color: black;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 850px) {
+  body {
+    font-size: 18px;
+  }
+
   input {
     max-width: 400px;
     width: 100%;

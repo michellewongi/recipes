@@ -7,7 +7,12 @@ function Drinks({ drinkList }) {
       <h1 className="drinks-name">{drinkList.drinks[0].strDrink}</h1>
       <img src={drinkList.drinks[0].strDrinkThumb} alt="Drink" />
       <p>
-        <strong>{drinkList.drinks[0].strCategory}</strong>
+        <strong>Category: </strong>
+        {drinkList.drinks[0].strCategory}
+      </p>
+      <p>
+        <strong>Alcoholic: </strong>
+        {drinkList.drinks[0].strAlcoholic}
       </p>
       <p>{drinkList.drinks[0].strInstructions}</p>
     </section>
