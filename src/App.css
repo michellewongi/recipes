@@ -104,6 +104,10 @@ input {
     width: 100%;
   }
 
+  .logo {
+    font-size: 4rem;
+  }
+
   .foodBtn,
   .drinkBtn {
     max-width: 200px;

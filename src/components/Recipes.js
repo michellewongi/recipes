@@ -14,7 +14,9 @@ function Recipe({ recipeList }) {
         {recipeList.results[0].readyInMinutes} minutes
       </p>
       <p
-        dangerouslySetInnerHTML={{ __html: recipeList.results[0].summary }}
+        dangerouslySetInnerHTML={{
+          __html: recipeList.results[0].summary.replace(/<a .*?>/g, ""),
+        }}
       ></p>
       <a href={recipeList.results[0].sourceUrl}>
         Link to the Recipe Instructions

@@ -34,6 +34,7 @@ function Home() {
       .get(recipeURL)
       .then(function (response) {
         setFood(response.data);
+        console.log(recipeURL);
       })
       .catch(function (error) {
         console.warn(error);
