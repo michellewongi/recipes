@@ -14,7 +14,6 @@ function Drinks({ drinkList }) {
         <strong>Alcoholic: </strong>
         {drinkList.drinks[0].strAlcoholic}
       </p>
-      <strong>Ingredients: </strong>
       <p>
         <strong>Instructions: </strong>
         {drinkList.drinks[0].strInstructions}
