@@ -1,6 +1,16 @@
 import React from "react";
 
 function Recipe({ recipeList }) {
+  function displayIngredients({ recipeList }) {
+    let ingredient = [];
+    for (let i = 1; i < 16; i++) {
+      if (recipeList.meals[0][`strIngredient${i}`]) {
+        ingredient +=
+          "<li>" + recipeList.meals[0][`strIngredient${i}`] + "</li>";
+      }
+    }
+    return ingredient;
+  }
   if (!recipeList) return <></>;
   return (
     <section className="recipeCard">
@@ -16,6 +26,12 @@ function Recipe({ recipeList }) {
         <strong>Cuisine: </strong>
         {recipeList.meals[0].strArea ? recipeList.meals[0].strArea : "Unknown"}
       </p>
+      <strong>Ingredients: </strong>
+      <ol
+        dangerouslySetInnerHTML={{
+          __html: displayIngredients({ recipeList }),
+        }}
+      ></ol>
       <strong>Instructions:</strong>
       <p
         className="instructions"
@@ -23,8 +39,8 @@ function Recipe({ recipeList }) {
           __html: recipeList.meals[0].strInstructions,
         }}
       ></p>
-      <a className="link" href={recipeList.meals[0].strSource}>
-        <strong>Click for Recipe</strong>
+      <a className="link" href={recipeList.meals[0].strYoutube}>
+        <strong>Watch the Tutorial</strong>
       </a>
     </section>
   );

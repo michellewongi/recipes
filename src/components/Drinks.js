@@ -24,6 +24,10 @@ function Drinks({ drinkList }) {
         <strong>Alcoholic: </strong>
         {drinkList.drinks[0].strAlcoholic}
       </p>
+      <p>
+        <strong>Glass: </strong>
+        {drinkList.drinks[0].strGlass}
+      </p>
       <strong>Ingredients: </strong>
       <ol
         dangerouslySetInnerHTML={{
