@@ -24,16 +24,16 @@ function Drinks({ drinkList }) {
         <strong>Alcoholic: </strong>
         {drinkList.drinks[0].strAlcoholic}
       </p>
-      <p>
-        <strong>Instructions: </strong>
-        {drinkList.drinks[0].strInstructions}
-      </p>
       <strong>Ingredients: </strong>
       <ol
         dangerouslySetInnerHTML={{
           __html: displayIngredients({ drinkList }),
         }}
       ></ol>
+      <p>
+        <strong>Instructions: </strong>
+        {drinkList.drinks[0].strInstructions}
+      </p>
     </section>
   );
 }
