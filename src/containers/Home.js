@@ -58,39 +58,43 @@ function Home() {
       <section className="search-section">
         <section className="food-section">
           <h1 className="food-title">Food</h1>
-          <input
-            type="text"
-            placeholder="Name of food (e.g. pasta)"
-            onChange={handleChange}
-          />
-          <button
-            className="foodBtn"
-            onClick={() => {
-              getRecipe();
-              changeColor("#f0a69c");
-            }}
-          >
-            Search
-          </button>
+          <div className="fields">
+            <input
+              type="text"
+              placeholder="Name of food (e.g. pasta)"
+              onChange={handleChange}
+            />
+            <button
+              className="foodBtn"
+              onClick={() => {
+                getRecipe();
+                changeColor("#f0a69c");
+              }}
+            >
+              Search
+            </button>
+          </div>
           <Recipe recipeList={food} />
         </section>
 
         <section className="drinks-section">
-          <h1 className="drinks-title">Drinks</h1>
-          <input
-            type="text"
-            placeholder="Name of drink (e.g. mojito)"
-            onChange={handleChangeDrink}
-          />
-          <button
-            className="drinkBtn"
-            onClick={() => {
-              getDrink();
-              changeColor("#ffcfa3");
-            }}
-          >
-            Search
-          </button>
+          <h1 className="drinks-title">Drink</h1>
+          <div className="fields">
+            <input
+              type="text"
+              placeholder="Name of drink (e.g. mojito)"
+              onChange={handleChangeDrink}
+            />
+            <button
+              className="drinkBtn"
+              onClick={() => {
+                getDrink();
+                changeColor("#ffcfa3");
+              }}
+            >
+              Search
+            </button>
+          </div>
           <Drinks drinkList={drink} />
         </section>
       </section>

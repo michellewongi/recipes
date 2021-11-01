@@ -14,8 +14,8 @@ function Recipe({ recipeList }) {
   if (!recipeList) return <></>;
   return (
     <section className="recipeCard">
-      <h1 className="food-name">{recipeList.meals[0].strMeal}</h1>
       <img src={recipeList.meals[0].strMealThumb} alt="Food" />
+      <h1 className="food-name">{recipeList.meals[0].strMeal}</h1>
       <p>
         <strong>Category: </strong>
         {recipeList.meals[0].strCategory

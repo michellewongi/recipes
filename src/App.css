@@ -20,10 +20,9 @@ hr {
 input {
   border-radius: 20px;
   height: 25px;
-  margin: 0 auto;
   margin-bottom: 0.3rem;
   text-align: center;
-  width: 80%;
+  width: 40%;
 }
 
 strong {
@@ -31,6 +30,12 @@ strong {
 }
 
 /* Main layout */
+
+.fields {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 
 .logo {
   color: white;
@@ -48,7 +53,7 @@ strong {
 
 .food-section,
 .drinks-section {
-  border-radius: 20px;
+  border-radius: 60px;
   display: flex;
   flex-direction: column;
   padding: 5rem 1.5rem;
@@ -90,7 +95,7 @@ strong {
 
 .food-name,
 .drinks-name {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -100,7 +105,7 @@ strong {
   border-radius: 15px;
   height: 25px;
   margin: 1rem auto 0;
-  width: 40%;
+  width: 20%;
 }
 
 .recipeCard,
@@ -110,6 +115,7 @@ strong {
 
 .drinkCard img,
 .recipeCard img {
+  border-radius: 10px;
   width: 100%;
 }
 
@@ -118,7 +124,7 @@ strong {
 }
 
 .link {
-  color: black;
+  color: rgb(177, 51, 5);
   display: block;
   text-align: center;
   text-decoration: none;
@@ -131,7 +137,12 @@ strong {
 
   input {
     max-width: 400px;
-    width: 100%;
+    width: 40%;
+  }
+
+  .fields {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
   .search-section {
@@ -144,7 +155,13 @@ strong {
 
   .foodBtn,
   .drinkBtn {
-    max-width: 200px;
+    max-width: 100px;
+    margin: 0;
+  }
+
+  .food-name,
+  .drinks-name {
+    font-size: 1.75rem;
   }
 
   .search-section {
