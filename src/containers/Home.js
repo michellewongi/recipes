@@ -54,6 +54,7 @@ function Home() {
     // have the UI be interactive
     <main className="App">
       <h1 className="logo">Recipes . . .</h1>
+      <hr />
       <section className="search-section">
         <section className="food-section">
           <h1 className="food-title">Food</h1>
