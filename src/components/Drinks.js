@@ -16,6 +16,7 @@ function Drinks({ drinkList }) {
     <section className="drinkCard">
       <img src={drinkList.drinks[0].strDrinkThumb} alt="Drink" />
       <h1 className="drinks-name">{drinkList.drinks[0].strDrink}</h1>
+
       <p>
         <strong>Category: </strong>
         {drinkList.drinks[0].strCategory}

@@ -14,10 +14,20 @@ function Home() {
   const drinksURL = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`;
 
   // have the UI change based on data
+  /*
+   * Function to change color of page background
+   * @param a The specified color
+   * @returns The body changed to the specifed color
+   */
   function changeColor(color) {
     document.body.style.backgroundColor = color;
   }
 
+  /*
+   * Function to update state
+   * @param a The value inputted
+   * @returns State updated
+   */
   function handleChange(e) {
     setFoodName(e.target.value);
   }
@@ -27,6 +37,10 @@ function Home() {
   }
 
   // Using two sources of data
+  /*
+   * Function to retrieve food recipe
+   * @returns food recipe data from API
+   */
   const getRecipe = () => {
     axios
       .get(recipeURL)
@@ -38,6 +52,10 @@ function Home() {
       });
   };
 
+  /*
+   * Function to retrieve drinks recipe
+   * @returns drinks recipe data from API
+   */
   const getDrink = () => {
     axios
       .get(drinksURL)
@@ -63,10 +81,16 @@ function Home() {
               type="text"
               placeholder="Name of food (e.g. pasta)"
               onChange={handleChange}
+              onKeyUp={(e) => {
+                if (e.key === "Enter") {
+                  getRecipe();
+                  changeColor("#f0a69c");
+                }
+              }}
             />
             <button
               className="foodBtn"
-              onClick={() => {
+              onClick={(e) => {
                 getRecipe();
                 changeColor("#f0a69c");
               }}
@@ -84,6 +108,12 @@ function Home() {
               type="text"
               placeholder="Name of drink (e.g. mojito)"
               onChange={handleChangeDrink}
+              onKeyUp={(e) => {
+                if (e.key === "Enter") {
+                  getDrink();
+                  changeColor("#ffcfa3");
+                }
+              }}
             />
             <button
               className="drinkBtn"
