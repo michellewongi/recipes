@@ -2,7 +2,6 @@
 
 - [Overview](#overview)
   - [Features](#features)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -16,10 +15,6 @@ Users should be able to:
 
 - Search for food/drink recipes
 - View recipe information for both
-
-### Screenshot
-
-![](images/screenshot.png)
 
 ### Links
 
