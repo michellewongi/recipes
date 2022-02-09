@@ -1,6 +1,11 @@
 import React from "react";
 
 function Recipe({ recipeList }) {
+  /*
+   * Function To display the list of ingredients
+   * @param  The data for the specified food
+   * @returns A list of ingredients associated with the specified food
+   */
   function displayIngredients({ recipeList }) {
     let ingredient = [];
     for (let i = 1; i < 16; i++) {

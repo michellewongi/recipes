@@ -13,10 +13,9 @@ function Home() {
 
   const drinksURL = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`;
 
-  // have the UI change based on data
   /*
    * Function to change color of page background
-   * @param a The specified color
+   * @param The specified color
    * @returns The body changed to the specifed color
    */
   function changeColor(color) {
@@ -25,7 +24,7 @@ function Home() {
 
   /*
    * Function to update state
-   * @param a The value inputted
+   * @param The value inputted
    * @returns State updated
    */
   function handleChange(e) {
@@ -36,7 +35,6 @@ function Home() {
     setDrinkName(e.target.value);
   }
 
-  // Using two sources of data
   /*
    * Function to retrieve food recipe
    * @returns food recipe data from API
@@ -68,8 +66,7 @@ function Home() {
   };
 
   return (
-    // displaying the two sources of data
-    // have the UI be interactive
+    // displaying both data in the UI
     <main className="App">
       <h1 className="logo">Recipes . . .</h1>
       <hr />
@@ -90,7 +87,7 @@ function Home() {
             />
             <button
               className="foodBtn"
-              onClick={(e) => {
+              onClick={() => {
                 getRecipe();
                 changeColor("#f0a69c");
               }}
