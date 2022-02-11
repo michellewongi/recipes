@@ -4,27 +4,27 @@ import Recipe from "../components/Recipes";
 import Drinks from "../components/Drinks";
 
 function Home() {
+  // initialize state variables
   const [food, setFood] = useState();
   const [foodName, setFoodName] = useState();
   const [drink, setDrink] = useState();
   const [drinkName, setDrinkName] = useState();
 
   const recipeURL = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`;
-
   const drinksURL = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`;
 
-  /*
+  /**
    * Function to change color of page background
-   * @param The specified color
+   * @param a specified color
    * @returns The body changed to the specifed color
    */
   function changeColor(color) {
     document.body.style.backgroundColor = color;
   }
 
-  /*
+  /**
    * Function to update state
-   * @param The value inputted
+   * @param a value inputted
    * @returns State updated
    */
   function handleChange(e) {
@@ -35,7 +35,7 @@ function Home() {
     setDrinkName(e.target.value);
   }
 
-  /*
+  /**
    * Function to retrieve food recipe
    * @returns food recipe data from API
    */
@@ -50,7 +50,7 @@ function Home() {
       });
   };
 
-  /*
+  /**
    * Function to retrieve drinks recipe
    * @returns drinks recipe data from API
    */

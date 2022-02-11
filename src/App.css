@@ -29,8 +29,7 @@ strong {
   font-size: 1.5rem;
 }
 
-/* Main layout */
-
+/* Home page layout */
 .fields {
   align-items: center;
   display: flex;
@@ -108,6 +107,7 @@ strong {
   width: 100px;
 }
 
+/* Recipe Card layout */
 .recipeCard,
 .drinkCard {
   margin: 2rem 0 0;
@@ -131,6 +131,7 @@ strong {
 }
 
 @media only screen and (min-width: 850px) {
+  /* Global styling */
   body {
     font-size: 18px;
   }
@@ -140,6 +141,7 @@ strong {
     width: 40%;
   }
 
+  /* Home page layout */
   .fields {
     flex-direction: row;
     justify-content: space-evenly;

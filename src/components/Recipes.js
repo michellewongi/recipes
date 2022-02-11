@@ -1,9 +1,9 @@
 import React from "react";
 
 function Recipe({ recipeList }) {
-  /*
+  /**
    * Function To display the list of ingredients
-   * @param  The data for the specified food
+   * @param a The data for the specified food
    * @returns A list of ingredients associated with the specified food
    */
   function displayIngredients({ recipeList }) {
