@@ -18,7 +18,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://elastic-kalam-69cb4d.netlify.app/]
+- Live Site URL: [https://elastic-kalam-69cb4d.netlify.app/](https://elastic-kalam-69cb4d.netlify.app/)
 
 ## My process
 
@@ -30,4 +30,4 @@ Users should be able to:
 
 # Author
 
-- Michelle Wong [https://michellewong.me]
+- [Michelle Wong](https://michellewong.me)
